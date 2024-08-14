@@ -112,6 +112,7 @@ class MainMenu extends StatelessWidget {
                   }),
                 )
               ])),
+              
             ),
           ],
         ),
@@ -158,7 +159,8 @@ class HealthButton extends StatelessWidget {
             SizedBox(width: 25),
             Text(
               quizSet.name,
-              style: TextStyle(fontSize: 28, color: Colors.black),
+              style: TextStyle(
+                  fontSize: 28, color: textColor, fontWeight: FontWeight.bold),
             ),
           ]),
         ),

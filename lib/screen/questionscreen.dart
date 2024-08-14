@@ -14,9 +14,9 @@ class QuestionScreen extends StatefulWidget {
 
 class _QuestionScreenState extends State<QuestionScreen> {
   int _currentQuestionIndex = 0;
-  List<int> _selectedAnswers = List.filled(8, -1);
+  List<int> _selectedAnswers = List.filled(1, -1); //8
   List<int> _selectedAnswersHIV = List.filled(1, -1);
-  List<int> _selectedAnswersSmoking = List.filled(8, -1);
+  List<int> _selectedAnswersSmoking = List.filled(1, -1); //8
 
   void _nextQuestion() {
     setState(() {
@@ -104,7 +104,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             SizedBox(height: 10),
             Text(
               currentQuestion.text,
-              style: TextStyle(fontSize: 18.0),
+              style: TextStyle(fontSize: 22.0),
             ),
             Divider(color: Colors.grey),
             SizedBox(height: 10),
@@ -144,9 +144,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 if (_currentQuestionIndex > 0)
                   ElevatedButton(
                     onPressed: _prevQuestion,
-                    child: Text('ย้อนกลับ',style: TextStyle(fontSize: 16),),
+                    child: Text('ย้อนกลับ',style: TextStyle(fontSize: 18),),
                     style: ElevatedButton.styleFrom(
-                      foregroundColor: Colors.white,
+                      foregroundColor: buttonTextColor,
                       backgroundColor: nextButtonColor, // Text color
                       padding: EdgeInsets.symmetric(
                           horizontal: 16.0, vertical: 16.0), // Padding
@@ -162,9 +162,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     onPressed: selectedAnswers[_currentQuestionIndex] == -1
                         ? null
                         : _nextQuestion,
-                    child: Text('ถัดไป',style: TextStyle(fontSize: 16),),
+                    child: Text('ถัดไป',style: TextStyle(fontSize: 18),),
                     style: ElevatedButton.styleFrom(
-                      foregroundColor: Colors.white,
+                      foregroundColor: buttonTextColor,
                       backgroundColor: nextButtonColor, // Text color
                       padding: EdgeInsets.symmetric(
                           horizontal: 16.0, vertical: 16.0), // Padding
@@ -180,9 +180,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     onPressed: selectedAnswers[_currentQuestionIndex] == -1
                         ? null
                         : _submitQuiz,
-                    child: Text('Submit',style: TextStyle(fontSize: 16),),
+                    child: Text('Submit',style: TextStyle(fontSize: 18),),
                     style: ElevatedButton.styleFrom(
-                      foregroundColor: Colors.white,
+                      foregroundColor: buttonTextColor,
                       backgroundColor: nextButtonColor, // Text color
                       padding: EdgeInsets.symmetric(
                           horizontal: 16.0, vertical: 16.0), // Padding

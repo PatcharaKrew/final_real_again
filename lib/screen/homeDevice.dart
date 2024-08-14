@@ -4,6 +4,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:final_real_again/screen/mainMenu.dart';
 import 'package:final_real_again/screen/appointmentDetail.dart';
 import 'package:final_real_again/constants/color.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 void main() {
@@ -14,6 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: backgroundColor,
+          textTheme: GoogleFonts.notoSansThaiTextTheme(),
+      ),
       home: HomeDevicePage(),
       debugShowCheckedModeBanner: false,
     );
